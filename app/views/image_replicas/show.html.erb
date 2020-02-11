@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @image_replica.position %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @image_replica.type %>
+</p>
+
+<p>
+  <strong>Timeout:</strong>
+  <%= @image_replica.timeout %>
+</p>
+
+<p>
+  <strong>Phrase:</strong>
+  <%= @image_replica.phrase %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <div class="img">
+    <%= image_tag(@image_replica.image.url, alt: 'Image') if @image_replica.image? %>
+  </div>
+</p>
+
+<%= link_to 'Edit', edit_image_replica_path(@image_replica) %> |
+<%= link_to 'Back', replicas_path %>

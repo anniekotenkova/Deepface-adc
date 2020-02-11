@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gift:</strong>
+  <%= step.gift %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= step.opening %>
+</p>
+
+<%= link_to 'Edit', edit_step_path(step) %> |
+<%= link_to 'Back', steps_path %>
+
+<hr>
+
+<h2>Replicas</h2>
+
+<%= render step.replicas %>
+
+<br> <br>
+
+<div class="">
+  <%= link_to 'New Text Replica', new_step_text_replica_path(step) %>
+</div>
+
+<div class="">
+  <%= link_to 'New Image Replica', new_step_image_replica_path(step) %>
+</div>
+
+
+<hr>
+
+<h2>Answers</h2>
+<%= render step.answers %>
+
+<br>
+
+<%= link_to 'New Answer', new_step_answer_path(step) %>
